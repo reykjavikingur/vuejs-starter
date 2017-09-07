@@ -1,20 +1,21 @@
-# web-dev-lab
+# VueJS starter project
 
 Web front end development project starter
 
 
 ## Usage
 
-To initialize a new project with web-dev-lab:
-
-* `npm install -g gnat`
-* `gnat clone https://github.com/reykjavikingur/web-dev-lab.git <<YOUR_DIRECTORY>>`
+* `git clone https://github.com/reykjavikingur/vuejs-starter.git <<YOUR_DIRECTORY>>`
 * `cd <<YOUR_DIRECTORY>>`
 * `npm install`
 * `npm start`
 
 
-## TODO
+## Features
 
-* use nodemon to restart everything when gulpfile.js or package.json changes
-* include .editorconfig
+* Babel (ES6)
+* Browserify
+* Browser-Sync
+* Gulp
+* VueJS
+* SASS
