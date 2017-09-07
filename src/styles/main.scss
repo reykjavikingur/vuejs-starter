@@ -4,3 +4,16 @@ body {
 	background-color: #e0e0e0;
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+.active {
+	color: red;
+}
+
+.choice {
+	cursor: pointer;
+	display: block;
+	
+	&:hover {
+		text-decoration: underline;
+	}
+}
