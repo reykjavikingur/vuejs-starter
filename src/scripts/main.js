@@ -9,3 +9,7 @@ window.runRoutingExample = function () {
 window.runStatesExample = function () {
     require('./states');
 };
+
+window.runTreeExample = function () {
+    require('./tree');
+};
