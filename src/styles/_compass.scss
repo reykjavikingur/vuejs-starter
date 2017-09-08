@@ -1,0 +1,13 @@
+.compass {
+	background-color: #eff;
+	border: 1px solid currentColor;
+	cursor: crosshair;
+	display: inline-block;
+	margin: 1em 5em;
+	padding: 2em 1em;
+	user-select: none;
+	
+	.label {
+		display: inline-block;
+	}
+}
