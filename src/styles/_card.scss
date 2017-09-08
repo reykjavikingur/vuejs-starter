@@ -1,0 +1,32 @@
+.card {
+	
+	border: 1px solid currentColor;
+	display: inline-block;
+	padding: 0.5em;
+	position: relative;
+	width: 25%;
+	
+	button.share {
+		position: absolute;
+		right: 1em;
+		top: 1em;
+		visibility: hidden;
+	}
+	
+	&:hover {
+		button.share {
+			visibility: visible;
+		}
+	}
+	
+	img {
+		width: 100%;
+		height: auto;
+	}
+	
+	&__detail {
+		display: inline-block;
+		width: 100%;
+	}
+	
+}

@@ -1,6 +1,7 @@
 /* main styles */
 
 @import 'compass';
+@import 'card';
 
 body {
 	background-color: #e0e0e0;
@@ -26,4 +27,8 @@ body {
 	&:hover {
 		text-decoration: underline;
 	}
+}
+
+section {
+	margin: 3em 0 10em;
 }
