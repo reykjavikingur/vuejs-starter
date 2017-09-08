@@ -11,7 +11,12 @@
 <main class="app-list">
     <h2>Your Numbers</h2>
     <div>
-        <span v-for="number of numbers"> &laquo; {{number}} &raquo; </span>
+        <span class="cta"
+              v-for="(number, index) of numbers"
+              v-on:click="dismiss(index)"
+        >
+            &laquo; {{number}} &raquo;
+        </span>
         <span v-if="numbers.length == 0">(none yet)</span>
     </div>
 </main>

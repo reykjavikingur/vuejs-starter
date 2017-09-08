@@ -8,7 +8,14 @@ window.listApp = new Vue({
 
     el: 'main.app-list',
 
-    data: source
+    data: source,
+
+    methods: {
+        dismiss: function(i) {
+            console.log('dismissing', i);
+            this.numbers.splice(i, 1);
+        }
+    }
 
 });
 
@@ -35,7 +42,7 @@ window.summaryApp = new Vue({
 setRandomInterval(() => {
     let number = Math.floor(random(0, 100));
     source.numbers.push(number);
-}, 3000, 7000);
+}, 1000, 4000);
 
 function random(min, max) {
     return Math.random() * (max - min) + min;

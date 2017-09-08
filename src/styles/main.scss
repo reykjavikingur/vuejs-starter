@@ -17,3 +17,11 @@ body {
 		text-decoration: underline;
 	}
 }
+
+.cta {
+	cursor: pointer;
+	
+	&:hover {
+		text-decoration: underline;
+	}
+}
