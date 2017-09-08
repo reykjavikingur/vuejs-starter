@@ -1,19 +1,32 @@
 console.log('starting states example');
 
-var source = {
-    numbers: []
-};
+window.store = new Vuex.Store({
+
+    strict: true,
+
+    state: {
+        numbers: []
+    },
+
+    mutations: {
+        append: function (state, number) {
+            state.numbers.push(number);
+        },
+        dismiss: function (state, index) {
+            state.numbers.splice(index, 1);
+        }
+    }
+});
 
 window.listApp = new Vue({
 
     el: 'main.app-list',
 
-    data: source,
+    data: window.store.state,
 
     methods: {
-        dismiss: function(i) {
-            console.log('dismissing', i);
-            this.numbers.splice(i, 1);
+        dismiss: function (i) {
+            window.store.commit('dismiss', i);
         }
     }
 
@@ -23,7 +36,7 @@ window.summaryApp = new Vue({
 
     el: 'main.app-summary',
 
-    data: source,
+    data: window.store.state,
 
     methods: {
         sum: function (ns) {
@@ -41,7 +54,7 @@ window.summaryApp = new Vue({
 
 setRandomInterval(() => {
     let number = Math.floor(random(0, 100));
-    source.numbers.push(number);
+    window.store.commit('append', number);
 }, 1000, 4000);
 
 function random(min, max) {
