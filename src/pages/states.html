@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VueJS Example: States</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="assets/styles/main.css"/>
+</head>
+<body>
+<h1>VueJS Example: States</h1>
+
+<main class="app-list">
+    <h2>Your Numbers</h2>
+    <div>
+        <span v-for="number of numbers"> &laquo; {{number}} &raquo; </span>
+        <span v-if="numbers.length == 0">(none yet)</span>
+    </div>
+</main>
+
+<main class="app-summary">
+    <h2>Your Summary</h2>
+    <p>Count: {{numbers.length}}</p>
+    <p>Sum: {{sum(numbers)}}</p>
+</main>
+
+<script src="https://unpkg.com/vue"></script>
+<script src="assets/scripts/main.js"></script>
+<script type="text/javascript">
+    runStatesExample();
+</script>
+</body>
+</html>
